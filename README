@@ -3,6 +3,8 @@
 A handy utility to pop up an xlogo as the decimal seconds 
 since epoch aligns itself with 1234567890
 
+This utility should probably be called 123456780meter or something but I got tired of typing when inputting the project name.
+
 1233999731: 2009-02-07  1 01:42:11
 1233999744: 2009-02-07  1 01:42:24
 
