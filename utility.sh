@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #A handy shell script to pop up an xlogo each time another digit
 # in the decimal seconds since the epoch lines up with 1234567890
@@ -33,29 +33,29 @@ fi
 ###############################################
 # Begin popping up xlogos as the time aligns
 
-n=1		#The character position we are testing at
+WIDTH=1		#The character position we are testing at
 
 CURRENT=0	#Set this to 1 after we catch up to current.
 
 XLOGOS=0	#The number of xlogos we have popped up
 
-while [ $n -le ${#GOAL} ]
+while [ $WIDTH -le ${#GOAL} ]
 do
 	TIME=`date +%s`
 
 	if [ $TIME -gt $GOAL ]
 	then
 		echo $0: Error. Time $TIME is greater than goal. > /dev/stderr
-		exit 1
+		break
 	fi
 
-	if [ ${GOAL:0:n} == ${TIME:0:n} ]
+	if [ ${GOAL:0:WIDTH} == ${TIME:0:WIDTH} ]
 	then
-		#We matched at $n characters.
+		#We matched at $WIDTH characters.
 		MATCHES=$((MATCHES+1))
 
-		#Increment $n
-		n=$((n + 1))
+		#Increment $WIDTH
+		WIDTH=$((WIDTH + 1))
 
 		#Pass until we are current
 		if [ $CURRENT != 0 ]
@@ -70,8 +70,9 @@ do
 		# then now we are. 
 		if [ $CURRENT == 0 ]
 		then
-			echo $0: Time is $TIME.
-			echo $0: Currently checking at $n characters.
+			echo $0: Time is $TIME. Goal is $GOAL.
+			echo $0: $((GOAL - TIME)) time units until goal.
+			echo $0: Currently checking at $WIDTH characters.
 			CURRENT=1
 		fi
 
@@ -91,6 +92,7 @@ do
 
 		if [ $OFFSET -gt 10 ]
 		then
+			echo $0: Next event occurs in $OFFSET time units.
 			sleep $((OFFSET / 2))
 		else
 			sleep 1
@@ -114,4 +116,16 @@ then
 fi
 
 echo You have been observing for $XLOGOS xlogos.
+
+#
+###############################################
+# Return an error code for success or failure
+#  
+
+if [ $XLOGOS == 0 ]
+then
+	exit 1
+fi
+
+exit 0
 
