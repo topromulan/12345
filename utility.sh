@@ -8,8 +8,7 @@
 # dra@redevised.net
 #
 
-#GOAL=1234567890		# 10 X 123456789
-GOAL=1234412912
+GOAL=1234567890		# 10 X 123456789
 
 SYNTAX="$0"			#Script takes no arguments
 
