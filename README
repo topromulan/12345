@@ -8,6 +8,15 @@ By default it will run with debugging output. To get clean output, run with the 
 
 bash utility.sh
 
-8,11 February 2009 by Dale Anderson
+utility.sh - More thoughtful version.
+
+8,11,12 February 2009 by Dale Anderson
 dra@redevised.net
+
+History:
+
+2009-02-08: Initial version (tests every second).
+2009-02-11: CPU saver version (sleeps during long waits).
+2009-02-12: More thoughtful version (only congratulates when warranted).
+
 
