@@ -18,5 +18,6 @@ History:
 2009-02-08: Initial version (tests every second).
 2009-02-11: CPU saver version (sleeps during long waits).
 2009-02-12: More thoughtful version (only congratulates when warranted).
+2009-02-12: Final version with screenshot demonstration.
 
 
