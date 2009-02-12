@@ -100,9 +100,18 @@ do
 done
 
 ###############################################
-# Issue congratulations
+# Final report and 
+#  Issue congratulations (if warranted by 1 or more xlogos popping up).
 
 echo $0: Time $TIME equals $GOAL.
-echo $0: Congratulations. You have been observing for $XLOGOS xlogos.
 
+echo -n "$0: "
+
+if [ $XLOGOS -gt 0 ]
+then
+	#Congratulations are in order
+	echo -n "Congratulations! "
+fi
+
+echo You have been observing for $XLOGOS xlogos.
 
