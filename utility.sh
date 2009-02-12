@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 #A handy shell script to pop up an xlogo each time another digit
 # in the decimal seconds since the epoch lines up with 1234567890
@@ -8,7 +8,8 @@
 # dra@redevised.net
 #
 
-GOAL=1234567890		# 10 X 123456789
+#GOAL=1234567890		# 10 X 123456789
+GOAL=1234412912
 
 SYNTAX="$0"			#Script takes no arguments
 
@@ -75,8 +76,26 @@ do
 			CURRENT=1
 		fi
 
-		#Hold 1 second.
-		sleep 1
+		#Create a pad of an appropriate amount of zeros:
+		ZEROS=`echo $GOAL | sed s/./0/g`
+
+		#Fill in the current matches:
+		NEXTEVENT=`echo $ZEROS | sed 's/^.\{'$((MATCHES+1))'\}/'${GOAL:0:MATCHES+1}'/'`
+
+		#Calculate how long until the next match:
+		OFFSET=$((NEXTEVENT - TIME))
+
+		#Sleep for half the time, if it is more than
+		# ten seconds away. If it is sooner than ten 
+		# seconds away then monitor closely so we can
+		# pop up the next xlogo right on goal.
+
+		if [ $OFFSET -gt 10 ]
+		then
+			sleep $((OFFSET / 2))
+		else
+			sleep 1
+		fi
 	fi
 	
 done
