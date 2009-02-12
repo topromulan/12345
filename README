@@ -1,28 +1,9 @@
 
-
 A handy utility to pop up an xlogo as the decimal seconds 
 since epoch aligns itself with 1234567890
 
-See also:
-
-http://www.mail-archive.com/leapsecs@rom.usno.navy.mil/msg00109.html
-
-This utility should probably be called 123456780meter or something but I got tired of typing when inputting the project name.
-
-1233999731: 2009-02-07  1 01:42:11
-1233999744: 2009-02-07  1 01:42:24
-
-Originally challenged myself to write this when it occurred to me
-in the last 250 or so seconds there, but I did fail to do that -
-although I blame the whiskey.
-
-1234567890-1234116252
-451638
-451638 / 60 / 60 / 24
-5
-
 This utility has approximately 5 days' use so download it quick.
 
-8 February 2009 by Dale Anderson
+8,11 February 2009 by Dale Anderson
 dra@redevised.net
 
