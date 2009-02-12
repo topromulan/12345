@@ -2,7 +2,11 @@
 A handy utility to pop up an xlogo as the decimal seconds 
 since epoch aligns itself with 1234567890
 
-This utility has approximately 5 days' use so download it quick.
+This utility has only a few days' use so download it quick.
+
+By default it will run with debugging output. To get clean output, run with the following syntax:
+
+bash utility.sh
 
 8,11 February 2009 by Dale Anderson
 dra@redevised.net
