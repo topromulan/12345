@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #A handy shell script to pop up an xlogo each time another digit
-# in the decimal seconds since the epoch lines up with 1234567890
-# (10 X 123456789!)
+# in the decimal seconds since the epoch lines up with 1999999999
 #
-# 8 February 2009 by Dale Anderson
+# 1234567890 utility Version 2
+# 8-13 February 2009 by Dale Anderson
 # dra@redevised.net
 #
 
-GOAL=1234567890		# 10 X 123456789
+GOAL=1999999999		# Version 2. Target Wed May 18 03:33:19 2033
 
 SYNTAX="$0"			#Script takes no arguments
 

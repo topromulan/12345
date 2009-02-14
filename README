@@ -1,12 +1,12 @@
 
 A handy utility to pop up an xlogo as the decimal seconds 
-since epoch aligns itself with 1234567890
+since epoch aligns itself with an arbitrary number.
 
-This utility will pass usefulness on 13 February. Then we'll have to update it for May 2033 or something I think.
+Version 2 will pass usefulness Wed May 18 03:33:19 2033 GMT.
 
-utility.sh - More thoughtful version.
+utility.sh - Version 2
 
-8,11,12 February 2009 by Dale Anderson
+8-13 February 2009 by Dale Anderson
 dra@redevised.net
 
 History:
@@ -15,5 +15,6 @@ History:
 2009-02-11: CPU saver version (sleeps during long waits).
 2009-02-12: More thoughtful version (only congratulates when warranted).
 2009-02-12: Final version with screenshot demonstration.
+2009-02-13: Version 2
 
 
